@@ -40,7 +40,7 @@ Your include and lib folders should look like this:
 │   │   ├── alext.h
 │   │   ├── efx.h
 │   │   ├── efx-creative.h
-│	│   └── efx-presets.h
+│   │   ├── efx-presets.h
 │   └── GL/
 │       └── glut.h
 └── lib/
