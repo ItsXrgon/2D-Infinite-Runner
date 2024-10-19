@@ -1,32 +1,6 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+/.vs/2D-Infinite-Runner
+/2D-Infin.083125f5/Debug
+/Debug
+/2D-Infinite-Runner.vcxproj
+/2D-Infinite-Runner.vcxproj.filters
+/2D-Infinite-Runner.vcxproj.user
