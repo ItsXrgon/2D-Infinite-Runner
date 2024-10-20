@@ -6,7 +6,7 @@ public:
     float x, y;
     int health, maxHealth;
     float width, height;
-    bool isJumping, isDucking, isGrounded, isColliding;
+    bool isJumping, isDucking, isGrounded;
     bool isInvincible;
     float invincibilityDuration;
     float invincibilityTimer;

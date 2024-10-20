@@ -61,5 +61,6 @@ void Invincibility::draw(float deltaTime) const {
 
 void Invincibility::applyEffect(Player& player) const {
     player.isInvincible = true;
-    player.invincibilityTimer = player.invincibilityDuration; 
+    player.invincibilityTimer = player.invincibilityDuration;
+    audioManager.playFile("coin");
 }

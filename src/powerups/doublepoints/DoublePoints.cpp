@@ -3,8 +3,7 @@
 #include "../PowerUp.h"
 #include "../../Globals.h"
 #include <cmath>
-#include <GL/glut.h>s
-
+#include <GL/glut.h>
 
 DoublePoints::DoublePoints(float startY)
     : PowerUp(startY) {}
@@ -69,4 +68,5 @@ void DoublePoints::draw(float deltaTime) const {
 void DoublePoints::applyEffect(Player& player) const {
     player.isDoublePoints = true;
     player.doublePointsTimer = player.doublePointsDuration;
+    audioManager.playFile("coin");
 }

@@ -1,10 +1,12 @@
 #include "Player.h"
 #include "../Globals.h"
+#include "../scenemanager/scenes/GameOver/GameOver.h"
 #include "cmath"
 #include <GL/glut.h>
 
 float bodyBop = 2.0f;
 float bodyBopCounter = 0.0;
+
 
 Player::Player() {
     x = 100;
@@ -16,7 +18,6 @@ Player::Player() {
     isJumping = false;
 	isDucking = false;
 	isGrounded = true;
-	isColliding = false;
 	invincibilityDuration = 10.0f;
 	isInvincible = false;
 	invincibilityTimer = 0.0f;
@@ -134,10 +135,10 @@ void Player::unDuck() {
 void Player::handleObjectCollision() {
 	if (invincibilityTimer <= 0) {
 		health -= 1;
-
-		invincibilityTimer = 5.0f;
+		audioManager.playFile("damage");
 
 		if (health <= 0) {
+			sceneManager.setActiveScene(new GameOver());
 		}
 	}
 }
@@ -149,6 +150,7 @@ void Player::handleCollectibleCollision() {
 	else {
 		score++;
 	}
+	audioManager.playFile("coin");
 }
 
 Rect Player::getBoundingBox() {
